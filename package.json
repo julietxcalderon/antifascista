@@ -1,0 +1,25 @@
+{
+  "name": "antifascista",
+  "version": "1.0.0",
+  "description": "AA+",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julietxcalderon/antifascista.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julietxcalderon/antifascista/issues"
+  },
+  "homepage": "https://github.com/julietxcalderon/antifascista#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
