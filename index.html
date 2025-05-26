@@ -67,7 +67,6 @@
     <div class="emoji" onclick="copiarEmoji(this)">✠</div>
     <div class="emoji" onclick="copiarEmoji(this)">❃</div>
     <div class="emoji" onclick="copiarEmoji(this)">☠</div>
-    <div class="emoji" onclick="copiarEmoji(this)">❄</div>
     <div class="emoji" onclick="copiarEmoji(this)">☤</div>
     <div class="emoji" onclick="copiarEmoji(this)">☮</div>
     <div class="emoji" onclick="copiarEmoji(this)">Ψ</div>
@@ -77,20 +76,16 @@
     <div class="emoji" onclick="copiarEmoji(this)">⚑</div>
     <div class="emoji" onclick="copiarEmoji(this)">♫</div>
     <div class="emoji" onclick="copiarEmoji(this)">♡</div>
-    <div class="emoji" onclick="copiarEmoji(this)">♥</div>
     <div class="emoji" onclick="copiarEmoji(this)">❸</div>
     <div class="emoji" onclick="copiarEmoji(this)">☿</div>
     <div class="emoji" onclick="copiarEmoji(this)">✞</div>
     <div class="emoji" onclick="copiarEmoji(this)">ꕤ</div>
-    <div class="emoji" onclick="copiarEmoji(this)">☀</div>
     <div class="emoji" onclick="copiarEmoji(this)">☢</div>
     <div class="emoji" onclick="copiarEmoji(this)">☣</div>
     <div class="emoji" onclick="copiarEmoji(this)">ʘ</div>
     <div class="emoji" onclick="copiarEmoji(this)">☪</div>
     <div class="emoji" onclick="copiarEmoji(this)">𖡎</div>
     <div class="emoji" onclick="copiarEmoji(this)">✖</div>
-    <div class="emoji" onclick="copiarEmoji(this)">☁</div>
-    <div class="emoji" onclick="copiarEmoji(this)">🃠</div>
   </div>
   <div id="mensaje-copiado-emoji" style="display: none;">Emoji copiado 😎</div>
 </section>
@@ -101,16 +96,21 @@
   <h1>CONVERSOR DE TEXTO =</h1>
   <textarea id="inputTexto" rows="5" placeholder="Escribí tu texto acá..."></textarea>
   <select id="selectorFuente" onchange="actualizarTextoConvertido()">
-    <option value="serif">Serif clásica</option>
-    <option value="monospace">Monoespaciada</option>
+    <option value="negrita">Negrita fuerte</option>
+    <option value="italica">Itálica matemática</option>
+    <option value="mono">Monoespaciada técnica</option>
+    <option value="burbujaNegra">Burbuja negra</option>
     <option value="cursive">Cursiva rebelde</option>
-    <option value="pressStart">Pixel retro</option>
+    <option value="noble">Letra noble</option>
     <option value="unifraktur">Gótica antifascista</option>
+    <option value="medieval">Medieval sólida</option>
     <option value="dobleLinea">Doble línea</option>
     <option value="pequeña">Pequeña superior</option>
     <option value="burbuja">Burbuja</option>
     <option value="invertida">Invertida</option>
-    <option value="medieval">Medieval sólida</option>
+    <option value="revolution">Revolución</option>
+    <option value="protesta">Protesta</option>
+    <option value="subversiva">Subversiva</option>
   </select>
   <div id="textoConvertido" contenteditable="true"></div>
   <button type="button" onclick="copiarTextoConvertido()" id="copiarTextoBtn">Copiar texto convertido</button>
