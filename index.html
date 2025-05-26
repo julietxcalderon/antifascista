@@ -1,106 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="description" content="Galería antifascista con símbolos, fuentes y manifiesto contra el autoritarismo">
+  <meta name="keywords" content="antifascista, símbolos, emojis, fuentes, manifiesto, autoritarismo">
+  <meta name="author" content="Tu Nombre o Colectivo">
+  <meta property="og:title" content="# GALERÍA ANTIFASCISTA">
+  <meta property="og:description" content="Recursos digitales contra el fascismo y el autoritarismo">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="URL_DEL_SITIO">
+  <meta property="og:image" content="URL_DE_LA_IMAGEN">
+  <meta name="theme-color" content="#000000">
   <link rel="icon" href="img15.png" type="image/x-icon" />
+  <link rel="stylesheet" href="estilos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
-  <title># TIENDA ANTIFASCISTA</title>
-  <style>
-    body {
-      font-family: "Cascadia Mono";
-      color: #f5f5f5;
-      padding: 2rem;
-      background: #010101;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .manifiesto {
-     background-color: #010101;
-     color: #f5f5f5;
-     padding: 2rem;
-     border-radius: 10px;
-     margin-top: 2rem;
-     border: 2px solid #ffd5f8;
-    }
-
-    .manifiesto h1 {
-     color: #ff2273;
-     margin-top: 1.5rem;
-     text-transform: uppercase;
-    }
-
-    .manifiesto h2 {
-     color: #ffd33b;
-     margin-top: 1.5rem;
-     text-transform: uppercase;
-    }
-
-    .manifiesto h3 {
-     color: #00bfc3;
-     margin-top: 1.5rem;
-     text-transform: uppercase;
-    }
-
-    .manifiesto h4 {
-     color: #ffd5f8;
-     margin-top: 1.5rem;
-    }
-    
-    h5 {
-     color: #ffd5f8;
-     font-size: 1.5rem;
-     text-transform: uppercase;
-     margin-top: 5rem;
-    }
-
-    .manifiesto p {
-    margin: 0.5rem 0;
-    line-height: 1.6;
-    }
-
-    .manifiesto ul, .manifiesto ol {
-    padding-left: 1.5rem;
-    margin: 1rem 0;
-    }
-
-    .manifiesto li {
-    margin-bottom: 0.5rem;
-    }
-
-    .producto {
-      color: #010101;
-      background: #fff;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    button {
-      background: #ff2273;
-      border: none;
-      padding: 0.7rem 1.2rem;
-      color: #fff;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #ff227365;
-    }
-
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=UnifrakturCook&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <title># ANTIFASCISTA</title>
 </head>
 
 <body>
 
-<div class="manifiesto">
-  <h1>El fascismo del siglo XXI no siempre se presenta con uniformes o símbolos obvios, sino que se nutre de tecnologías para concentrar poder, manipular masas y debilitar instituciones democráticas. Su combate requiere regulación ética de la tecnología, transparencia y defensa activa de los derechos digitales.</h1>
+<div class="tittle"><h1># ANTIFASCISTA</h1></div>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="#tienda">Tienda</a></li>
+    <li><a href="#emojis">Emojis</a></li>
+    <li><a href="#convertidor">Fuentes</a></li>
+    <li><a href="#manifiesto">Manifiesto</a></li>
+  </ul>
+</nav>
+
+<hr />
+
+<section id="tienda">
+  <h1>// TIENDA VIRTUAL</h1>
+  <button id="recargar">Recargar productos</button>
+  <input type="number" id="buscarId" placeholder="Buscar producto por ID" />
+  <button id="buscarBtn">Buscar</button>
+  <div id="productoBuscado"></div>
+<!--
+  <div id="productos"></div>
+-->
+  <input type="text" id="nuevoTitulo" placeholder="Título" />
+  <input type="number" step="0.01" id="nuevoPrecio" placeholder="Precio" />
+  <input type="text" id="nuevaCategoria" placeholder="Categoría" />
+  <button id="crearBtn">Crear producto</button>
+  <div id="crearResultado"></div>
+</section>
+
+  <hr />
+
+<section class="emojis" id="emojis">
+  <h1>SÍMBOLOS 🜀🜁🜂🜃🜄⛤</h1>
+  <div class="emoji-grid">
+    <div class="emoji" onclick="copiarEmoji(this)">𖣯</div>
+    <div class="emoji" onclick="copiarEmoji(this)">⌬</div>
+    <div class="emoji" onclick="copiarEmoji(this)">⚠</div>
+    <div class="emoji" onclick="copiarEmoji(this)">⚖</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☯</div>
+    <div class="emoji" onclick="copiarEmoji(this)">✶</div>
+    <div class="emoji" onclick="copiarEmoji(this)">✠</div>
+    <div class="emoji" onclick="copiarEmoji(this)">❃</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☠</div>
+    <div class="emoji" onclick="copiarEmoji(this)">❄</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☤</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☮</div>
+    <div class="emoji" onclick="copiarEmoji(this)">Ψ</div>
+    <div class="emoji" onclick="copiarEmoji(this)">♛</div>
+    <div class="emoji" onclick="copiarEmoji(this)">♊︎</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☻</div>
+    <div class="emoji" onclick="copiarEmoji(this)">⚑</div>
+    <div class="emoji" onclick="copiarEmoji(this)">♫</div>
+    <div class="emoji" onclick="copiarEmoji(this)">♡</div>
+    <div class="emoji" onclick="copiarEmoji(this)">♥</div>
+    <div class="emoji" onclick="copiarEmoji(this)">❸</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☿</div>
+    <div class="emoji" onclick="copiarEmoji(this)">✞</div>
+    <div class="emoji" onclick="copiarEmoji(this)">ꕤ</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☀</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☢</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☣</div>
+    <div class="emoji" onclick="copiarEmoji(this)">ʘ</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☪</div>
+    <div class="emoji" onclick="copiarEmoji(this)">𖡎</div>
+    <div class="emoji" onclick="copiarEmoji(this)">✖</div>
+    <div class="emoji" onclick="copiarEmoji(this)">☁</div>
+    <div class="emoji" onclick="copiarEmoji(this)">🃠</div>
+  </div>
+  <div id="mensaje-copiado-emoji" style="display: none;">Emoji copiado 😎</div>
+</section>
+
+  <hr />
+
+<section id="convertidor">
+  <h1>CONVERSOR DE TEXTO =</h1>
+  <textarea id="inputTexto" rows="5" placeholder="Escribí tu texto acá..."></textarea>
+  <select id="selectorFuente" onchange="actualizarTextoConvertido()">
+    <option value="serif">Serif clásica</option>
+    <option value="monospace">Monoespaciada</option>
+    <option value="cursive">Cursiva rebelde</option>
+    <option value="pressStart">Pixel retro</option>
+    <option value="unifraktur">Gótica antifascista</option>
+    <option value="dobleLinea">Doble línea</option>
+    <option value="pequeña">Pequeña superior</option>
+    <option value="burbuja">Burbuja</option>
+    <option value="invertida">Invertida</option>
+    <option value="medieval">Medieval sólida</option>
+  </select>
+  <div id="textoConvertido" contenteditable="true"></div>
+  <button type="button" onclick="copiarTextoConvertido()" id="copiarTextoBtn">Copiar texto convertido</button>
+  <div id="mensaje-copiado-texto">Texto copiado ✔️</div>
+</section>
+
+  <hr />
+
+<section id="manifiesto">
+  <h1># MANIFIESTO ANTIFASCISTA</h1>
+  <div class="manifiesto">
+  <h2>El fascismo del siglo XXI no siempre se presenta con uniformes o símbolos obvios, sino que se nutre de tecnologías para concentrar poder, manipular masas y debilitar instituciones democráticas. Su combate requiere regulación ética de la tecnología, transparencia y defensa activa de los derechos digitales.</h2>
   <p><strong>Vínculo con tecnologías y nuevas formas de control</strong></p>
   <ol>
     <li>Vigilancia masiva y control social</li>
@@ -110,15 +132,14 @@
     <li>Centralización del poder corporativo-estatal</li>
   </ol>
   <p>¿Por qué es peligroso?</p>
-    <ul>
+  <ul>
     <li>Erosión de la democracia</li>
     <li>Normalización de la opresión</li>
     <li>Globalización del autoritarismo</li>
   </ul>
   <p>No todo uso de tecnología es fascista, pero su aplicación sin límites éticos abre la puerta a distopías autoritarias.</p>
 
-
-  <h2>Los microfascismos nos recuerdan que el autoritarismo no es algo lejano o del pasado: vive en gestos, palabras y estructuras que perpetuamos. Identificarlos y desarmarlos es un acto revolucionario que construye sociedades más libres y menos violentas.</h2>
+  <h3>Los microfascismos nos recuerdan que el autoritarismo no es algo lejano o del pasado: vive en gestos, palabras y estructuras que perpetuamos. Identificarlos y desarmarlos es un acto revolucionario que construye sociedades más libres y menos violentas.</h3>
   <p><strong>Prácticas fascistas y microfascismos: manifestaciones cotidianas del autoritarismo</strong></p>
   <p>Son comportamientos, normas o sistemas que, sin ser formalmente fascistas, reproducen su esencia.</p>
   <ul>
@@ -133,7 +154,7 @@
   </ul>
   <p>Prácticas fascistas en la vida cotidiana, en la política, en las relaciones sociales, en instituciones, en la cultura digital. Cómo combatirlos: Educación crítica. Solidaridad activa. Denuncia pública. Arte y cultura. Políticas locales.</p>
 
-  <h3>El antirracismo y el antifascismo buscan construir sociedades más justas e igualitarias, libres de opresión y discriminación. Su alianza  es esencial para enfrentar los desafíos actuales y para fomentar un futuro basado en la dignidad humana, la solidaridad colectiva y el respeto irrenunciable a los derechos de todas las personas.</h3>
+  <h4>El antirracismo y el antifascismo buscan construir sociedades más justas e igualitarias, libres de opresión y discriminación. Su alianza es esencial para enfrentar los desafíos actuales y para fomentar un futuro basado en la dignidad humana, la solidaridad colectiva y el respeto irrenunciable a los derechos de todas las personas.</h4>
   <p><strong>El antirracismo y el antifascismo: vínculos y conexiones</strong></p>
   <p>El antirracismo y el antifascismo están profundamente vinculados porque el racismo es una herramienta central del fascismo.</p>
   <ol>
@@ -146,14 +167,16 @@
   </ol>
   <p>No todos los antifascistas son antirracistas (algunos pueden ignorar el racismo sistémico), ni todos los antirracistas son antifascistas (algunos pueden no ver la conexión con el autoritarismo). Sin embargo, su intersección es clave para una lucha efectiva contra la opresión.</p>
 </div>
+</section>
 
-<!--
-  <h5>Productos de la Tienda</h5>
-  <button id="cargar">Cargar productos</button>
-  <div id="productos"></div>
--->
+  <hr />
 
-  <script src="./app.js"></script>
+<footer class="footer">
+  <div> <a href="https://julietxcalderon.com.ar" style="color: #f5f5f5; text-decoration: none; font-weight: bold;" target="_blank">- JULIETXCALDERON -</a></div>
+    <p># antifascista 2025 // Ⓥ all rights deserved</p>
+</footer>
+
+<script src="./app.js"></script>
 
 </body>
 </html>
