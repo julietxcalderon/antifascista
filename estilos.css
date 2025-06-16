@@ -17,29 +17,27 @@ main {
 body {
   font-family: "Cascadia Mono", monospace;
   color: #f5f5f5;
-  background: #010101;
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-  transition: background 0.3s ease, color 0.3s ease;
   background: linear-gradient(rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.9)),
               url('img15.png') no-repeat center center fixed;
   background-size: cover;
+  padding: 2rem;
+  margin: 0 auto;
+  transition: background 0.3s ease, color 0.3s ease;
+  width: 100%;
+  max-width: 900px;
 }
 
 .tittle h1 {
   color: #333;
   font-size: 5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 1.5rem 0 1rem;
   text-transform: uppercase;
 }
 
 h1 {
   color: #ffd5f8;
   font-size: 3rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin: 1.5rem 0 0.5rem;
   text-transform: uppercase;
 }
 
@@ -70,14 +68,14 @@ p {
 }
 
 hr {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   border: none;
   height: 1px;
   background: #333;
 }
 
-#mensaje-copiado-texto, #mensaje-copiado-emoji {
+#mensaje-copiado-texto,
+#mensaje-copiado-emoji {
   display: none;
   color: #ffd33b;
   margin-top: 1rem;
@@ -87,7 +85,8 @@ hr {
   margin-top: 3rem;
 }
 
-#inputTexto, #textoConvertido {
+#inputTexto,
+#textoConvertido {
   width: 100%;
   margin-top: 1rem;
   background: #222;
@@ -106,7 +105,8 @@ hr {
   margin-top: 1.5rem;
 }
 
-#selectorFuente, #fontSelector {
+#selectorFuente,
+#fontSelector {
   margin-top: 0.8rem;
   background: #222;
   color: #f5f5f5;
@@ -117,7 +117,8 @@ hr {
   font-family: inherit;
 }
 
-#copiarTextoBtn, button {
+#copiarTextoBtn,
+button {
   margin-top: 1rem;
   background: #ff2273;
   border: none;
@@ -130,7 +131,8 @@ hr {
   font-family: inherit;
 }
 
-button:hover, #copiarTextoBtn:hover {
+button:hover,
+#copiarTextoBtn:hover {
   background: #ff227365;
   transform: scale(1);
 }
@@ -145,7 +147,8 @@ button:hover, #copiarTextoBtn:hover {
   transition: border-color 0.3s ease;
 }
 
-.manifiesto ul, .manifiesto ol {
+.manifiesto ul,
+.manifiesto ol {
   padding-left: 1.5rem;
   margin: 1rem 0;
 }
@@ -204,6 +207,7 @@ button:hover, #copiarTextoBtn:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
+  padding-left: 0;
 }
 
 .navbar li {
@@ -241,70 +245,13 @@ button:hover, #copiarTextoBtn:hover {
   transform: scale(1.3);
 }
 
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-
-  .tittle  h1 {
-    font-size: 2.5rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  .navbar ul {
-    gap: 1rem;
-  }
-
-  #inputTexto, #textoConvertido {
-    font-size: 1rem;
-  }
-
-  .producto {
-    padding: 0.8rem;
-  }
-
-  .emoji {
-    font-size: 2rem;
-  }
-
-  button, #copiarTextoBtn {
-    font-size: 0.75rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .tittle  h1 {
-    font-size: 2rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .emoji {
-    font-size: 1.8rem;
-  }
-
-  button, #copiarTextoBtn {
-    width: 100%;
-    padding: 0.6rem;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
 footer {
   background-color: #020202;
   text-align: center;
   padding: 3rem 2rem;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   z-index: 2;
   box-sizing: border-box;
@@ -338,14 +285,67 @@ footer img {
   }
 }
 
+/* Media Queries mejoradas */
+
 @media (max-width: 768px) {
-  .footer-logo {
-    max-height: 45px;
+  body {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .tittle h1,
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .navbar ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .emoji {
+    font-size: 2rem;
+  }
+
+  .producto {
+    padding: 0.8rem;
+  }
+
+  #inputTexto,
+  #textoConvertido {
+    font-size: 1rem;
+  }
+
+  button,
+  #copiarTextoBtn {
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
-  .footer-logo {
+  .tittle h1,
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .emoji {
+    font-size: 1.8rem;
+  }
+
+  button,
+  #copiarTextoBtn {
+    width: 100%;
+    padding: 0.6rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  footer img {
     max-height: 40px;
   }
 }
