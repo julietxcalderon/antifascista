@@ -20,7 +20,7 @@ export function authMiddleware(req, res, next) {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, JWT_SECRET);
     console.log('Token decodificado:', decoded);
     req.usuario = decoded;
     next();
