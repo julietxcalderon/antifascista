@@ -1,43 +1,21 @@
-import { db } from '../../config/firebase.js';
-
-const productsCollection = db.collection('products');
+import { ProductModel } from '../models/product.model.js';
 
 export const getAllProducts = async () => {
-  const snapshot = await productsCollection.get();
-  const products = [];
-  snapshot.forEach(doc => {
-    products.push({ id: doc.id, ...doc.data() });
-  });
-  return products;
+  return await ProductModel.getAll();
 };
 
 export const getProductById = async (id) => {
-  const docRef = productsCollection.doc(id);
-  const docSnap = await docRef.get();
-  if (!docSnap.exists) return null;
-  return { id: docSnap.id, ...docSnap.data() };
+  return await ProductModel.getById(id);
 };
 
 export const createProduct = async (producto) => {
-  const docRef = await productsCollection.add(producto);
-  return { id: docRef.id, ...producto };
+  return await ProductModel.create(producto);
 };
 
 export const deleteProduct = async (id) => {
-  const docRef = productsCollection.doc(id);
-  const docSnap = await docRef.get();
-  if (!docSnap.exists) return null;
-  await docRef.delete();
-  return true;
+  return await ProductModel.delete(id);
 };
 
 export const updateProduct = async (id, data) => {
-  const docRef = productsCollection.doc(id);
-  const docSnap = await docRef.get();
-
-  if (!docSnap.exists) return null;
-
-  await docRef.update(data);
-  const updatedDoc = await docRef.get();
-  return { id: updatedDoc.id, ...updatedDoc.data() };
+  return await ProductModel.update(id, data);
 };
